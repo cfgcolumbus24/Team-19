@@ -1,65 +1,26 @@
-/* Base editor styling */
-.lesson-page {
-    background-color: #282c34;
-    color: #abb2bf;
-    font-family: "Courier New", Courier, monospace;
+.author-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
     padding: 20px;
-    border-radius: 5px;
-    max-width: 800px;
-    margin: auto;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Title and Author styling */
-.lesson-page h1,
-.lesson-page h2 {
-    color: #61dafb;
-    font-weight: normal;
-    border-bottom: 1px solid #3b4048;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-}
-
-/* Section headers styling (e.g., materials, objectives) */
-.lesson-page h3 {
-    color: #e06c75;
-    font-size: 1.2em;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-/* Bulleted list styling */
-.lesson-page ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    padding-left: 10px;
-}
-
-.lesson-page ul li {
-    color: #98c379;
-    margin: 5px 0;
-}
-
-/* Button styling */
-.lesson-page button {
-    background-color: #61dafb;
-    color: #282c34;
-    font-weight: bold;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
+.author-card {
+    transition: transform 0.2s;
     cursor: pointer;
-    transition: background-color 0.2s ease;
-    margin-top: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
 }
 
-.lesson-page button:hover {
-    background-color: #4aa6d3;
+.author-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* JSON key styling */
-.lesson-page p {
-    color: #d19a66;
-    margin-top: 5px;
-    margin-left: 15px;
+.likes-count {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #666;
+    margin-top: 10px;
 }
