@@ -10,8 +10,8 @@ def add_sample_data():
                     "objectives": ["Understand variables", "Basic equations"],
                     "materials": ["Textbook", "Calculator"]
                 },
-                "author": "Someone else",
-                "subject": "Science",
+                "author": "Again John Doe",
+                "subject": "Math",
                 "lesson_number": 1,
             },
             {
@@ -20,8 +20,8 @@ def add_sample_data():
                     "objectives": ["Cell structure", "Cell function"],
                     "materials": ["Microscope", "Slides"]
                 },
-                "author": "Someone else",
-                "subject": "Reading",
+                "author": "Again Jane Smith",
+                "subject": "Science",
                 "lesson_number": 1,
             },
             {
@@ -30,8 +30,8 @@ def add_sample_data():
                     "objectives": ["Thesis statements", "Paragraph structure"],
                     "materials": ["Writing guide", "Examples"]
                 },
-                "author": "Someone else",
-                "subject": "Math",
+                "author": "Again Bob Wilson",
+                "subject": "English",
                 "lesson_number": 1,
             },
                         {
@@ -40,8 +40,8 @@ def add_sample_data():
                     "objectives": ["Understand variables", "Basic equations"],
                     "materials": ["Textbook", "Calculator"]
                 },
-                "author": "Someone else",
-                "subject": "Science",
+                "author": "Again John Doe",
+                "subject": "Math",
                 "lesson_number": 2,
             },
             {
@@ -50,8 +50,8 @@ def add_sample_data():
                     "objectives": ["Cell structure", "Cell function"],
                     "materials": ["Microscope", "Slides"]
                 },
-                "author": "Someone else",
-                "subject": "Reading",
+                "author": "Again Jane Smith",
+                "subject": "Science",
                 "lesson_number": 2,
             },
             {
@@ -60,8 +60,8 @@ def add_sample_data():
                     "objectives": ["Thesis statements", "Paragraph structure"],
                     "materials": ["Writing guide", "Examples"]
                 },
-                "author": "Someone else",
-                "subject": "Math",
+                "author": "Again Bob Wilson",
+                "subject": "English",
                 "lesson_number": 2,
             }
         ]
