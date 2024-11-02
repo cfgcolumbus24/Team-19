@@ -10,8 +10,8 @@ def add_sample_data():
                     "objectives": ["Understand variables", "Basic equations"],
                     "materials": ["Textbook", "Calculator"]
                 },
-                "author": "John Doe",
-                "subject": "Math",
+                "author": "Someone else",
+                "subject": "Science",
                 "lesson_number": 1,
             },
             {
@@ -20,8 +20,8 @@ def add_sample_data():
                     "objectives": ["Cell structure", "Cell function"],
                     "materials": ["Microscope", "Slides"]
                 },
-                "author": "Jane Smith",
-                "subject": "Science",
+                "author": "Someone else",
+                "subject": "Reading",
                 "lesson_number": 1,
             },
             {
@@ -30,9 +30,39 @@ def add_sample_data():
                     "objectives": ["Thesis statements", "Paragraph structure"],
                     "materials": ["Writing guide", "Examples"]
                 },
-                "author": "Bob Wilson",
-                "subject": "English",
+                "author": "Someone else",
+                "subject": "Math",
                 "lesson_number": 1,
+            },
+                        {
+                "json_content": {
+                    "title": "Introduction to Algebra",
+                    "objectives": ["Understand variables", "Basic equations"],
+                    "materials": ["Textbook", "Calculator"]
+                },
+                "author": "Someone else",
+                "subject": "Science",
+                "lesson_number": 2,
+            },
+            {
+                "json_content": {
+                    "title": "Cell Biology",
+                    "objectives": ["Cell structure", "Cell function"],
+                    "materials": ["Microscope", "Slides"]
+                },
+                "author": "Someone else",
+                "subject": "Reading",
+                "lesson_number": 2,
+            },
+            {
+                "json_content": {
+                    "title": "Essay Writing",
+                    "objectives": ["Thesis statements", "Paragraph structure"],
+                    "materials": ["Writing guide", "Examples"]
+                },
+                "author": "Someone else",
+                "subject": "Math",
+                "lesson_number": 2,
             }
         ]
 
