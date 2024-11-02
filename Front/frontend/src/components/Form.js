@@ -148,7 +148,7 @@ const Form = () => {
           onChange={(e) => handleChange(e, "subject", "main_topic")}
         />
         {formData.subject.subtopics.map((subtopic, index) => (
-          <div key={index}>
+          <div key={index} className="subtopic">
             <h4>{capitalizeWords("subtopic")} {index + 1}</h4>
             <label>{capitalizeWords("name")}:</label>
             <input

@@ -16,6 +16,11 @@ form {
     margin-bottom: 15px;
   }
   
+  form .subtopic {
+    margin-top: 20px; /* Add margin to space out subtopics */
+    margin-bottom: 20px; /* Reduce bottom margin for consistency */
+  }
+  
   form label {
     display: block;
     margin-bottom: 5px;
