@@ -1,0 +1,128 @@
+[
+    {
+        "question": "How many groups of 3 are there in 12?",
+        "options": [
+            {"answer": "3", "is_correct": false},
+            {"answer": "4", "is_correct": true},
+            {"answer": "5", "is_correct": false},
+            {"answer": "6", "is_correct": false}
+        ]
+    },
+    {
+        "question": "What is 7 + 7 + 7 equal to?",
+        "options": [
+            {"answer": "7 x 2", "is_correct": false},
+            {"answer": "7 x 3", "is_correct": true},
+            {"answer": "7 x 4", "is_correct": false},
+            {"answer": "7 x 5", "is_correct": false}
+        ]
+    },
+    {
+        "question": "What is 5 x 6?",
+        "options": [
+            {"answer": "25", "is_correct": false},
+            {"answer": "30", "is_correct": true},
+            {"answer": "35", "is_correct": false},
+            {"answer": "40", "is_correct": false}
+        ]
+    },
+    {
+        "question": "If you have 4 groups of 2, what is the total?",
+        "options": [
+            {"answer": "6", "is_correct": false},
+            {"answer": "8", "is_correct": true},
+            {"answer": "10", "is_correct": false},
+            {"answer": "12", "is_correct": false}
+        ]
+    },
+    {
+        "question": "Which of the following is equal to 9 x 5?",
+        "options": [
+            {"answer": "45", "is_correct": true},
+            {"answer": "40", "is_correct": false},
+            {"answer": "35", "is_correct": false},
+            {"answer": "50", "is_correct": false}
+        ]
+    },
+    {
+        "question": "What is 6 + 6 + 6 + 6?",
+        "options": [
+            {"answer": "6 x 3", "is_correct": false},
+            {"answer": "6 x 4", "is_correct": true},
+            {"answer": "6 x 5", "is_correct": false},
+            {"answer": "6 x 6", "is_correct": false}
+        ]
+    },
+    {
+        "question": "What is 8 x 8?",
+        "options": [
+            {"answer": "56", "is_correct": false},
+            {"answer": "64", "is_correct": true},
+            {"answer": "72", "is_correct": false},
+            {"answer": "81", "is_correct": false}
+        ]
+    },
+    {
+        "question": "If you multiply 4 by 9, what is the result?",
+        "options": [
+            {"answer": "32", "is_correct": false},
+            {"answer": "36", "is_correct": true},
+            {"answer": "40", "is_correct": false},
+            {"answer": "45", "is_correct": false}
+        ]
+    },
+    {
+        "question": "What is the product of 3 and 7?",
+        "options": [
+            {"answer": "18", "is_correct": false},
+            {"answer": "21", "is_correct": true},
+            {"answer": "24", "is_correct": false},
+            {"answer": "27", "is_correct": false}
+        ]
+    },
+    {
+        "question": "10 x 10 equals:",
+        "options": [
+            {"answer": "90", "is_correct": false},
+            {"answer": "100", "is_correct": true},
+            {"answer": "110", "is_correct": false},
+            {"answer": "120", "is_correct": false}
+        ]
+    },
+    {
+        "question": "What is the foundational skill for multiplication?",
+        "options": [
+            {"answer": "Addition", "is_correct": false},
+            {"answer": "Subtraction", "is_correct": false},
+            {"answer": "Counting", "is_correct": true},
+            {"answer": "Division", "is_correct": false}
+        ]
+    },
+    {
+        "question": "What is multiplication considered as?",
+        "options": [
+            {"answer": "Repeated subtraction", "is_correct": false},
+            {"answer": "Repeated addition", "is_correct": true},
+            {"answer": "Division", "is_correct": false},
+            {"answer": "Counting", "is_correct": false}
+        ]
+    },
+    {
+        "question": "Which skill should be memorized for numbers 1 through 10?",
+        "options": [
+            {"answer": "Addition facts", "is_correct": false},
+            {"answer": "Division facts", "is_correct": false},
+            {"answer": "Subtraction facts", "is_correct": false},
+            {"answer": "Multiplication facts", "is_correct": true}
+        ]
+    },
+    {
+        "question": "What is needed to practice two-digit multiplication?",
+        "options": [
+            {"answer": "Counters", "is_correct": false},
+            {"answer": "Multiplication table", "is_correct": false},
+            {"answer": "Grid paper", "is_correct": true},
+            {"answer": "Number charts", "is_correct": false}
+        ]
+    }
+]
