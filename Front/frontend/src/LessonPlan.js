@@ -53,21 +53,48 @@ export default function LessonPlan() {
         }
     };
 
+
     return (
-        <div className="lesson-plan">
-            <h1>{subject} - Lesson {lessonNumber}</h1>
-            <div className="lesson-content">
-                <RenderJSON data={plan.json_content} />
-            </div>
-            <div className="d-grid gap-2 mt-4">
-                <Button 
-                    variant="primary" 
-                    size="lg"
-                    onClick={() => navigate('/quiz')}
-                >
-                    Lesson Quiz
-                </Button>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8 lesson-plan">
+                    <h1>Lesson Plan Title</h1>
+                    <h2>Author: John Doe</h2>
+                    <div class="lesson-content">
+                     <h3>Lesson Content</h3>
+                    <p>Some lesson content here...</p>
+                    <ul>
+                        <li>Understand the concept of counting as a foundational skill for multiplication</li>
+                        <li>Use counters to demonstrate adding groups of the same number</li>
+                        <li>Practice multiplication with a table</li>
+                    </ul>
+                    </div>
+                    <Button 
+                        variant="primary" 
+                        size="lg"
+                        onClick={() => navigate('/quiz')}
+                    >
+                        Lesson Quiz
+                    </Button>
+                </div>
             </div>
         </div>
     );
+    // return (
+    //     <div className="lesson-plan">
+    //         <h1>{subject} - Lesson {lessonNumber}</h1>
+    //         <div className="lesson-content">
+    //             <RenderJSON data={plan.json_content} />
+    //         </div>
+    //         <div className="d-grid gap-2 mt-4">
+    //             <Button 
+    //                 variant="primary" 
+    //                 size="lg"
+    //                 onClick={() => navigate('/quiz')}
+    //             >
+    //                 Lesson Quiz
+    //             </Button>
+    //         </div>
+    //     </div>
+    // );
 }
