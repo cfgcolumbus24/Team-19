@@ -4,21 +4,21 @@ import { useNavigate } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
 import Button from "react-bootstrap/Button";
 import { BsCamera } from "react-icons/bs";
+import "./MainDrop.css";
 
 export default function MainDrop() {
-
 	const navigate = useNavigate();
 	const [subjects, setSubjects] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
 
-    useEffect(() => {
+	useEffect(() => {
 		const fetchSubjects = async () => {
 			try {
 				setLoading(true);
 				setError(null);
 
-                const response = await fetch("http://localhost:5000/api/subjects", {
+				const response = await fetch("http://localhost:5000/api/subjects", {
 					method: "GET",
 					headers: {
 						Accept: "application/json",
@@ -26,10 +26,10 @@ export default function MainDrop() {
 					},
 				});
 
-                if (!response.ok) {
+				if (!response.ok) {
 					throw new Error(`Server error: ${response.status}`);
 				}
-                const data = await response.json();
+				const data = await response.json();
 				console.log("Subjects fetched:", data);
 				setSubjects(Array.isArray(data) ? data : []);
 			} catch (error) {
@@ -40,7 +40,7 @@ export default function MainDrop() {
 				setLoading(false);
 			}
 		};
-        fetchSubjects();
+		fetchSubjects();
 	}, []);
 
 	return (
@@ -54,15 +54,14 @@ export default function MainDrop() {
 			{!loading && !error && (
 				<>
 					<Dropdown>
-						<Dropdown.Toggle variant="success">
-							Select Subject ({subjects.length})
-						</Dropdown.Toggle>
+						<Dropdown.Toggle variant="success">Select Subject</Dropdown.Toggle>
 						<Dropdown.Menu>
 							{subjects.length > 0 ? (
 								subjects.map((subject) => (
 									<Dropdown.Item
 										key={subject}
-										onClick={() => navigate(`/subject/${subject}`)} // Remove toLowerCase()
+										className={`${subject.toLowerCase()}-item`} // Add this line
+										onClick={() => navigate(`/subject/${subject}`)}
 									>
 										{subject}
 									</Dropdown.Item>
@@ -72,8 +71,9 @@ export default function MainDrop() {
 							)}
 						</Dropdown.Menu>
 					</Dropdown>
-					<Button onClick={() => navigate("/scan")}>
-						Scan Lesson Plan <BsCamera />
+					<Button onClick={() => navigate("/scan")} className="scan-button">
+						<BsCamera style={{ marginBottom: "4px", marginRight: "6px" }} />{" "}
+						Scan Lesson Plan
 					</Button>
 				</>
 			)}
