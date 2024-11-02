@@ -9,13 +9,14 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
  
 
-class LessonPlan(db.Model):
-    __tablename__ = "lessonplan"
-    lesson_plan_id = db.Column(db.Integer,dump_only=True, primary_key = True)
-    lesson_number = db.Column(db.Integer, required = True) 
-    lesson_name = db.Column(db.String, required = True)
-    subject = db.Column(db.String, required = True)
-    content = db.Column(db.String, required = True)
-    score = db.Column(db.Integer, dump_only = True, default = 0)
-    date_uploaded =db.Column(db.DateTime, default=datetime.utcnow)
+class LessonPlanModel(db.Model):
+    __tablename__ = "lesson_plans"
+    lesson_plan_id = db.Column(db.Integer, primary_key = True)
+    subject = db.Column(db.String, nullable = False)
+    lesson_number = db.Column(db.Integer, nullable = False) 
+    lesson_name = db.Column(db.String, nullable = False)
+    content = db.Column(db.String, nullable = False)
+    author = db.Column(db.String, nullable = False)
+    score = db.Column(db.Integer, default = 0)
+    date_uploaded =db.Column(db.DateTime, default = datetime.datetime.now)
 

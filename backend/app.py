@@ -7,9 +7,9 @@ from flask_smorest import Api
 from flask_migrate import Migrate
 
 from db import db
-from blocklist import BLOCKLIST
-from models import _____Model
-from resources._____ import blp as _____BluePrint
+#from blocklist import BLOCKLIST
+from models import LessonPlanModel
+from blueprints.lessonPlan import blp as LessonPlanBluePrint
 
 def create_app(db_url=None):
     app = Flask(__name__)
@@ -21,7 +21,7 @@ def create_app(db_url=None):
     app.config["OPENAPI_URL_PREFIX"] = "/"
     app.config["OPENAPI_SWAGGER_UI_PATH"] = "/swagger-ui"
     app.config["OPENAPI_SWAGGER_UI_URL"] = "https://cdn.jsdelivr.net/npm/swagger-ui-dist/"
-    app.config["SQLALCHEMY_DATABASE_URI"] = db_url or os.getenv("DATABASE_URL", "sqlite:///volunteer.db")
+    app.config["SQLALCHEMY_DATABASE_URI"] = db_url or os.getenv("DATABASE_URL", "sqlite:///lessonplan.db")
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.init_app(app)
 
@@ -64,6 +64,6 @@ def create_app(db_url=None):
         return {"is_admin": user.is_admin}
     '''        
 
-    api.register_blueprint(UserBluePrint)
+    api.register_blueprint(LessonPlanBluePrint)
     
     return app
