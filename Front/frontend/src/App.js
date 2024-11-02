@@ -24,6 +24,7 @@ function App() {
             <Route path="/subject/:subject/lesson/:lessonNumber" element={<LessonPage />} />
             <Route path="/subject/:subject/lesson/:lessonNumber/plan/:planId" element={<LessonPlan />} />
             <Route path="*" element={<div>Page not found</div>} />
+            <Route path="/quiz" element={<QuizApp />} />
           </Routes>
         </main>
       </div>
