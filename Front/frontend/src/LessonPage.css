@@ -58,8 +58,35 @@
 }
 
 /* JSON key styling */
-.lesson-page p {
+/* .lesson-page p {
     color: #d19a66;
     margin-top: 5px;
     margin-left: 15px;
 }
+.author-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.author-card {
+    transition: transform 0.2s;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+.author-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.likes-count {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #666;
+    margin-top: 10px;
+}
+ */
