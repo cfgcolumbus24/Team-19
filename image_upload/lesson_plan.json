@@ -1,0 +1,34 @@
+{
+  "subject": {
+    "headline": "Language Arts",
+    "subtopic": "Improving Note-taking Skills"
+  },
+  "learning_objectives": {
+    "knowledge_objectives": [
+      "Recognizing different note-taking methods",
+      "Identifying effective note-taking strategies"
+    ],
+    "skill_objectives": [
+      "Practicing legible handwriting",
+      "Utilizing technology for note-taking"
+    ],
+    "behavioral_goals": [
+      "Demonstrating improved note-taking techniques"
+    ]
+  },
+  "materials_needed": [
+    "Pen",
+    "Paper",
+    "Laptop"
+  ],
+  "instructional_activities": [
+    "Discussing different note-taking methods",
+    "Practicing handwriting techniques",
+    "Exploring digital note-taking tools"
+  ],
+  "assessment_methods": [
+    "Observing students' note-taking during class discussions",
+    "Reviewing students' handwritten notes for legibility",
+    "Evaluating students' use of technology for note-taking"
+  ]
+}

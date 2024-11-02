@@ -1,23 +1,24 @@
-// MainDrop.js
 import React, { useState, useEffect } from "react";
+
 import { useNavigate } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
 import Button from "react-bootstrap/Button";
 import { BsCamera } from "react-icons/bs";
 
 export default function MainDrop() {
+
 	const navigate = useNavigate();
 	const [subjects, setSubjects] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
 
-	useEffect(() => {
+    useEffect(() => {
 		const fetchSubjects = async () => {
 			try {
 				setLoading(true);
 				setError(null);
 
-				const response = await fetch("http://localhost:5000/api/subjects", {
+                const response = await fetch("http://localhost:5000/api/subjects", {
 					method: "GET",
 					headers: {
 						Accept: "application/json",
@@ -25,11 +26,10 @@ export default function MainDrop() {
 					},
 				});
 
-				if (!response.ok) {
+                if (!response.ok) {
 					throw new Error(`Server error: ${response.status}`);
 				}
-
-				const data = await response.json();
+                const data = await response.json();
 				console.log("Subjects fetched:", data);
 				setSubjects(Array.isArray(data) ? data : []);
 			} catch (error) {
@@ -40,8 +40,7 @@ export default function MainDrop() {
 				setLoading(false);
 			}
 		};
-
-		fetchSubjects();
+        fetchSubjects();
 	}, []);
 
 	return (
