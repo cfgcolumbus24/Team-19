@@ -9,7 +9,9 @@ const capitalizeWords = (str) => {
   return str.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
 };
 
+// Form component to display and handle form data
 const Form = () => {
+  // Initial data for the form
   const initialData = {
     lesson_id: "LP001",
     subject: {
@@ -85,10 +87,13 @@ const Form = () => {
     }
   };
 
+  // State to store form data and update it
   const [formData, setFormData] = useState(initialData);
 
+  // Function to handle form input changes
   const handleChange = (e, key, subKey, index) => {
     const { name, value } = e.target;
+    // Update form data based on input changes
     setFormData(prevState => {
       if (index !== undefined) {
         const updatedSubtopics = [...prevState.subject.subtopics];
@@ -117,12 +122,14 @@ const Form = () => {
     });
   };
 
+  // Function to handle form submission and log form data
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form Data Submitted:', formData);
   };
 
   return (
+    // Form to display and handle form data, especially to capitalize titles properly
     <form onSubmit={handleSubmit}>
       <div>
         <h3>{capitalizeWords("lesson_id")}</h3>
