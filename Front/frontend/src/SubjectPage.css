@@ -1,6 +1,29 @@
 .subject-page {
     text-align: center;
-    margin-top: 25px;
-    background-color: #222222;
-    
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin-bottom: 50px;
+}
+
+.subject-header {
+    margin-top: 150px;
+}
+
+
+.lessons-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    color: #282c34; /* Dark text color */
+    font-weight: bold; /* Bold text */
+    border: none; /* No border */
+    padding: 8px 12px; /* Padding around the button */
+    border-radius: 4px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.2s ease; /* Smooth background change on hover */
+    margin-top: 15px; /* Space above the button */
 }
