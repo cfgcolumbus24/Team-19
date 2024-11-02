@@ -1,72 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
 
-.poppins-bold {
-  font-family: "Poppins", serif;
-  font-weight: 800; /* Heavier bold font weight */
-  font-style: normal;
-}
-
-.introduction-section h1,
-.introduction-section p {
-  font-family: "Poppins", serif; /* Apply the Poppins font */
-  font-weight: 800; /* Use a heavier bold weight */
-}
-
-.introduction-section h1 {
-  font-size: 2.5rem;
-  color: #000000; /* Use solid black for better contrast */
-  margin-bottom: 20px; /* Add spacing between header and paragraph */
-}
-
-.introduction-section p {
-  font-size: 1.5rem; /* Larger font size for readability */
-  color: #000000; /* Use solid black for better contrast */
-  margin-top: 15px;
-  line-height: 1.8; /* Adjust line-height for better readability */
-}
-
-.transparent-box {
-  background-color: rgba(255, 255, 255, 0.85); /* Slightly transparent white */
-  padding: 20px;
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-.video-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: -1;
-  object-fit: cover; /* Ensures video covers the container */
-}
-
-.homepage-container {
-  position: relative;
-  z-index: 1;
-}
-
-.content-overlay {
-  position: relative;
-  z-index: 2;
-  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-}
-
-.video-crop-container {
-  position: relative;
-  width: 100%;
-  height: 50vh; /* Set the height to half of the viewport */
-  overflow: hidden;
-  z-index: -1; /* Ensures video stays behind content */
-  .transparent-box {
-	background-color: rgba(255, 255, 255, 0.85); /* Slightly transparent white */
-	padding: 20px;
-	border-radius: 10px; /* Rounded corners */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  }
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
-
+/* General font and styling */
 .poppins-bold {
     font-family: "Poppins", sans-serif;
     font-weight: 800; /* Heavier bold font weight */
@@ -79,14 +13,92 @@
     color: #000; /* Black text for better readability */
 }
 
-.translucent-background {
-    background-color: rgba(255, 255, 255, 0.85); /* Slightly translucent white */
-    border: 1px solid rgba(200, 200, 200, 0.5); /* Soft border */
+.custom-translucent-box {
+    background-color: rgba(255, 255, 255, 0.9); /* Translucent white with slight opacity */
+    border-radius: 10px; /* Rounded corners */
+    padding: 1.5rem; /* Add padding for better spacing */
 }
 
-.teacher-tools-heading {
-    font-size: 2rem; /* Adjust font size as needed */
-    font-weight: 800;
+/* Video background styling */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    object-fit: cover; /* Ensures video covers the container */
 }
 
+.video-crop-container {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Set the height to half of the viewport */
+    overflow: hidden;
+    z-index: -1; /* Ensures video stays behind content */
+}
+
+.homepage-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hover effects for the dropdown items */
+.dropdown-item {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.math-item:hover {
+    background-color: rgba(52, 183, 183, 0.7); /* Washed teal */
+    color: #ffffff;
+}
+
+.science-item:hover {
+    background-color: rgba(243, 121, 76, 0.7); /* Washed orange */
+    color: #ffffff;
+}
+
+.english-item:hover {
+    background-color: rgba(235, 5, 124, 0.7); /* Washed pink */
+    color: #ffffff;
+}
+
+.reading-item:hover {
+    background-color: rgba(188, 100, 160, 0.7); /* Washed purple */
+    color: #ffffff;
+}
+
+.social-studies-item:hover {
+    background-color: rgba(100, 36, 116, 0.7); /* Washed dark purple */
+    color: #ffffff;
+}
+
+/* General adjustments for smaller screens */
+@media (max-width: 768px) {
+    .video-background {
+        height: 200px; /* Adjust video height for smaller screens */
+    }
+
+    .custom-translucent-box {
+        padding: 2rem 1rem; /* Adjust padding for better fit */
+    }
+
+    .teacher-tools-container {
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
+}
+
+/* Adjustments for very small screens (mobile) */
+@media (max-width: 576px) {
+    .video-background {
+        height: 150px; /* Further reduce video height */
+    }
+
+    .poppins-bold {
+        font-size: 1.5rem; /* Smaller font size */
+    }
+
+    .teacher-tools-heading {
+        font-size: 1.25rem; /* Reduce heading size */
+    }
 }

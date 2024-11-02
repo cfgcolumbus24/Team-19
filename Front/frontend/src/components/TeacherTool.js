@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Dropdown, Button } from 'react-bootstrap';
 import { BsCamera } from 'react-icons/bs';
-import './TeacherTools.css'; // Create this CSS file for custom styling
+import './TeacherTools.css'; // Ensure this CSS file exists for custom styling
 
 function TeacherTools() {
   return (

@@ -1,79 +1,102 @@
-import React from 'react';
-import { Container, Row, Col, Button, Dropdown } from 'react-bootstrap';
-import Header from './Header'; // Import the Header component
-import OPING from '../assets/OPI.png'; 
-import VideoFile from '../assets/4221485-hd_1920_1080_30fps.mp4';
-import { BsCamera } from 'react-icons/bs';
-import './HomePage.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState, useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import Header from "./Header"; // Import the Header component
+import ImageCarousel from "./ImageCarousel"; // Import the ImageCarousel component
+import DropBar from "./DropBar"; // Import the DropBar component
+import VideoFile from "../assets/4221485-hd_1920_1080_30fps.mp4";
+import "./HomePage.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function HomePage() {
-  return (
-    <div className="homepage-container">
-      <Header /> {/* Include Header at the top */}
+    const navigate = useNavigate();
+    const [subjects, setSubjects] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-      {/* Video container to crop the video */}
-      <div className="video-crop-container">
-        <video className="video-background" autoPlay loop muted>
-          <source src={VideoFile} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+    // Fetch subjects from the API
+    useEffect(() => {
+        const fetchSubjects = async () => {
+            try {
+                setLoading(true);
+                setError(null);
 
-      {/* Enhanced Introduction Section */}
-      <Container className="introduction-section py-5">
-        <Row>
-          <Col className="text-center">
-            <div className="p-4 rounded shadow border translucent-background">
-              <h1 className="poppins-bold">Welcome to Opportunity International</h1>
-              <p className="lead poppins-bold">
-                At Opportunity International, we believe that education is the cornerstone of a thriving society. 
-                We are dedicated to empowering teachers and learners alike by providing the resources and tools 
-                needed to inspire growth, creativity, and lasting knowledge.
-              </p>
-              <p className="poppins-bold">
-                Teachers, you are the guiding light for the next generation. Your dedication, passion, and unwavering 
-                commitment shape the future and open doors of opportunity for countless young minds. We are here to 
-                support you every step of the way, offering curated lesson plans, interactive modules, and a platform 
-                where your teaching can flourish. Keep believing in your incredible impact, and know that your efforts 
-                are valued and transformative.
-              </p>
+                const response = await fetch("http://localhost:5000/api/subjects", {
+                    method: "GET",
+                    headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json",
+                    },
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Server error: ${response.status}`);
+                }
+
+                const data = await response.json();
+                console.log("Subjects fetched:", data);
+                setSubjects(Array.isArray(data) ? data : []);
+            } catch (error) {
+                console.error("Fetch error:", error);
+                setError(error.message);
+                setSubjects([]);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchSubjects();
+    }, []);
+
+    return (
+        <div className="homepage-container">
+            <Header /> {/* Include Header at the top */}
+            {/* Video container */}
+            <div className="video-crop-container">
+                <video className="video-background" autoPlay loop muted>
+                    <source src={VideoFile} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
             </div>
-          </Col>
-        </Row>
-      </Container>
-
-      {/* Teacher Tools Section */}
-      <Container className="teacher-tools-container p-4 rounded shadow my-5 translucent-background">
-        <h1 className="teacher-tools-heading text-center mb-4">Teacher Learning Tools</h1>
-        <div className="d-flex justify-content-center gap-3">
-          <Dropdown>
-            <Dropdown.Toggle variant="secondary" id="dropdown-basic" size="lg">
-              Select Subject
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item href="/math" className="dropdown-item">Math</Dropdown.Item>
-              <Dropdown.Item href="/science" className="dropdown-item">Science</Dropdown.Item>
-              <Dropdown.Item href="/english" className="dropdown-item">English</Dropdown.Item>
-              <Dropdown.Item href="/reading" className="dropdown-item">Reading</Dropdown.Item>
-              <Dropdown.Item href="/social-studies" className="dropdown-item">Social Studies</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-          <Button href="https://www.google.com" target="_blank" variant="light" size="lg">
-            Scan/Upload Lesson Plan <BsCamera style={{ marginLeft: '8px' }} />
-          </Button>
+            {/* Enhanced Introduction Section */}
+            <Container className="introduction-section py-4 bg-light shadow-sm rounded-3">
+                <Row>
+                    <Col xs={12} md={10} lg={8} className="mx-auto text-center">
+                        <div className="p-4 custom-translucent-box">
+                            <h1 className="poppins-bold">
+                                Welcome to Opportunity International
+                            </h1>
+                            <p className="lead poppins-bold">
+                                At Opportunity International, we believe that education is the
+                                cornerstone of a thriving society. We are dedicated to
+                                empowering teachers and learners alike by providing the
+                                resources and tools needed to inspire growth, creativity, and
+                                lasting knowledge.
+                            </p>
+                        </div>
+                    </Col>
+                </Row>
+                {/* Meet the Staff header above the ImageCarousel */}
+                <Row className="mt-4">
+                    <Col xs={12} className="text-center">
+                        <h2 className="poppins-bold">Meet the Staff</h2>
+                    </Col>
+                </Row>
+                <Row className="mt-3">
+                    <Col xs={12}>
+                        <ImageCarousel />
+                    </Col>
+                </Row>
+            </Container>
+            {/* Teacher Tools Section */}
+            <Container className="teacher-tools-container p-4 bg-light shadow-sm rounded-3 custom-translucent-box mt-4">
+                <h1 className="teacher-tools-heading text-center mb-4">
+                    Teacher Learning Tools
+                </h1>
+                <DropBar /> {/* Add DropBar component here */}
+            </Container>
         </div>
-      </Container>
-
-      <Container fluid className="d-flex vh-100 p-0 content-overlay">
-        <Row className="m-auto align-self-center w-100">
-          <Col className="text-center">
-            <img src={OPING} alt="OPI" className="img-fluid mb-4" />
-          </Col>
-        </Row>
-      </Container>
-    </div>
-  );
+    );
 }
 
 export default HomePage;
