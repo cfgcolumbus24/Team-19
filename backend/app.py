@@ -1,9 +1,9 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from models import db, LessonPlan
-
 app = Flask(__name__)
 
+# Updated CORS configuration
 CORS(app, 
      resources={r"/*": {"origins": "*"}},
      supports_credentials=True)
@@ -72,6 +72,22 @@ def get_lesson_content(subject, lesson_number):
         'likes': lesson.likes
     } for lesson in lessons])
 
+@app.route('/api/lessons/<subject>/<int:lesson_number>/<int:planId>', methods=['GET'])
+def get_lesson_plan(subject, lesson_number,planId):
+    lesson = LessonPlan.query.filter_by(
+        subject=subject,
+        lesson_number=lesson_number,
+        id=planId
+    ).one()
+    lesson.likes += 1
+    db.session.commit()
+    return jsonify({
+        'id': lesson.id,
+        'json_content': lesson.json_content,
+        'author': lesson.author,
+        'likes': lesson.likes
+        })
+    
 @app.route('/api/lessons/<int:lesson_id>/like', methods=['POST'])
 def like_lesson(lesson_id):
     lesson = LessonPlan.query.get_or_404(lesson_id)
