@@ -1,0 +1,13 @@
+.navbar {
+    background-color: #ffffff; /* Adjust background color if needed */
+}
+
+.nav-link {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: #333; /* Adjust text color */
+}
+
+.nav-link:hover {
+    color: #ea057e; /* Highlight color on hover */
+}
