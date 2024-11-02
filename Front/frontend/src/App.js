@@ -4,10 +4,13 @@ import './App.css';
 import HomePage from './components/HomePage'; // Ensure the path is correct
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import Home from './Home';
 import SubjectPage from './SubjectPage';
 import LessonPage from './LessonPage';
 import LessonPlan from './LessonPlan';
 import Quiz from './components/quiz';
+import QuizApp from './components/quizApp';
+import MainDrop from './components/MainDrop';
 
 function App() {
   return (
