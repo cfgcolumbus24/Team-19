@@ -8,3 +8,17 @@ class LessonData(Schema):
     content = fields.Str(required=True)
     author = fields.Str(required=True)
     date_uploaded = fields.DateTime(dump_only=True)
+
+class Author(Schema):
+    author_id = fields.Int(dump_only=True)
+    author_name = fields.Str(required=True)
+
+class SubjectType(Enum):
+    MATH = "math"
+    LANGUAGE = "language"
+    HIST = "history"
+    SCIENCE = "science"
+class Subject(Schema):
+    subject_id = fields.Int(dump_only=True)
+    subject_name = fields.Str(required=True)
+

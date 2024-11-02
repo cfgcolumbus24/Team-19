@@ -13,5 +13,3 @@ class LessonPlanModel(db.Model):
     score = db.Column(db.Integer, default = 0)
     date_uploaded =db.Column(db.DateTime, default = datetime.datetime.now)
 
-
-
