@@ -6,17 +6,24 @@
     font-weight: 800; /* Heavier bold font weight */
 }
 
+/* Introduction and tool section styling */
 .introduction-section h1,
-.introduction-section p {
+.introduction-section p,
+.teacher-tools-heading {
     font-family: "Poppins", sans-serif; /* Apply the Poppins font */
     font-weight: 800; /* Use a heavier bold weight */
     color: #000; /* Black text for better readability */
 }
 
-.custom-translucent-box {
-    background-color: rgba(255, 255, 255, 0.9); /* Translucent white with slight opacity */
+/* Translucent container styling */
+.custom-translucent-box,
+.teacher-tools-container,
+.introduction-section {
+    background-color: rgba(255, 255, 255, 0.4); /* Translucent white */
     border-radius: 10px; /* Rounded corners */
-    padding: 1.5rem; /* Add padding for better spacing */
+    border: 1px solid rgba(221, 221, 221, 0.5); /* Slightly transparent border */
+    padding: 2rem; /* Uniform padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
 }
 
 /* Video background styling */
@@ -50,7 +57,7 @@
 
 .math-item:hover {
     background-color: rgba(52, 183, 183, 0.7); /* Washed teal */
-    color: #ffffff;
+    color: #ae5b12;
 }
 
 .science-item:hover {
@@ -80,7 +87,7 @@
     }
 
     .custom-translucent-box {
-        padding: 2rem 1rem; /* Adjust padding for better fit */
+        padding: 2rem 1rem; /* Adjust padding for smaller screens */
     }
 
     .teacher-tools-container {

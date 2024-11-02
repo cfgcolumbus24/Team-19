@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
 
 .teacher-tools-container {
-    background-color: rgba(255, 255, 255, 0.198); /* Semi-transparent white background */
-    border: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.5); /* Increased transparency for a more translucent effect */
+    border: 1px solid rgba(221, 221, 221, 0.5); /* Semi-transparent border */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
@@ -10,15 +10,16 @@
 .teacher-tools-heading {
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
-    font-size: 3rem; /* Very large text */
+    font-size: 2.5rem; /* Adjusted text size for better balance */
     color: #333; /* Dark gray for contrast */
 }
 
 .dropdown-item {
     transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.5); /* Translucent background */
 }
 
 .dropdown-item:hover {
-    background-color: #555555; /* Darker background on hover */
+    background-color: rgba(85, 85, 85, 0.7); /* Darker translucent background on hover */
     color: #ffffff; /* White text on hover */
 }

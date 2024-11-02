@@ -4,9 +4,11 @@ import { useNavigate } from "react-router-dom";
 import Header from "./Header"; // Import the Header component
 import ImageCarousel from "./ImageCarousel"; // Import the ImageCarousel component
 import DropBar from "./DropBar"; // Import the DropBar component
+import Footer from "./Footer"; // Import the Footer component
 import VideoFile from "../assets/4221485-hd_1920_1080_30fps.mp4";
 import "./HomePage.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function HomePage() {
     const navigate = useNavigate();
@@ -58,6 +60,7 @@ function HomePage() {
                     Your browser does not support the video tag.
                 </video>
             </div>
+             
             {/* Enhanced Introduction Section */}
             <Container className="introduction-section py-4 bg-light shadow-sm rounded-3">
                 <Row>
@@ -79,7 +82,7 @@ function HomePage() {
                 {/* Meet the Staff header above the ImageCarousel */}
                 <Row className="mt-4">
                     <Col xs={12} className="text-center">
-                        <h2 className="poppins-bold">Meet the Staff</h2>
+                        <h2 className="poppins-bold">Meet the Staff!</h2>
                     </Col>
                 </Row>
                 <Row className="mt-3">
@@ -95,6 +98,8 @@ function HomePage() {
                 </h1>
                 <DropBar /> {/* Add DropBar component here */}
             </Container>
+            {/* Include Footer */}
+            <Footer />
         </div>
     );
 }
