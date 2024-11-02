@@ -1,0 +1,133 @@
+/* Add CSS for the form*/
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    font-family: sans-serif; /* Apply the sans-serif font */
+  }
+  
+  /* Add CSS for form headings, subtopics, labels, inputs, and buttons */
+  form h3, form h4 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Add margin to space out form elements */
+  form div {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  
+  form .subtopic {
+    margin-top: 30px; /* Add margin to space out subtopics */
+    margin-bottom: 30px; /* Ensure consistent bottom margin */
+  }
+  
+  form .subtopic h4 {
+    margin-top: 0; /* Remove top margin for subtopic titles */
+    margin-bottom: 15px; /* Add bottom margin for subtopic titles */
+  }
+  
+  /*Add CSS for form labels which are the questions*/
+  form label {
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    font-weight: bold;
+  }
+  
+  /*Deals with the input fields*/
+  form input[type="text"],
+  form textarea {
+    width: 100%;
+    height: 44px;
+    background-color: #05060f0a;
+    border-radius: 3em;
+    padding: 0 1rem;
+    border: 3px solid transparent;
+    font-size: 1rem;
+    font-family: sans-serif;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s, background .2s cubic-bezier(.25,.01,.25,1) 0s;
+    box-sizing: border-box;
+    display: flex;
+    padding-top: 4px;
+    flex-wrap: wrap; /* Add wrap to input fields */
+  }
+
+  form input[type="text"]:hover,
+  form input[type="text"]:focus,
+  form textarea:hover,
+  form textarea:focus {
+    border-color: #05060f;
+    outline: none;
+  }
+
+  form input[type="text"]:focus,
+    form textarea:focus{
+        color: #05060fc2;
+    }
+  
+  form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Add hover effect to the form button */
+  form button:hover {
+    background-color: #45a049;
+  }
+
+  /*CSS for the button*/
+.btn {
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff; /* Initial text color white */
+    margin: 1rem auto;
+    padding: 0.7rem 2rem;
+    border-radius: 30em;
+    border-style: none;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: #000; /* Initial background color black */
+    box-shadow: 1px 1px 12px #000000;
+  }
+  
+  /* Create sliding white background effect for button */
+  .btn::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transform: translateX(-101%);
+    transition: all .3s ease;
+    z-index: -1;
+  }
+  
+  /* Add hover effect to the submit button */
+  .btn:hover {
+    color: #272727;
+    transition: all .3s ease;
+  }
+  
+  .btn:hover::before {
+    transform: translateX(0);
+  }
