@@ -1,69 +1,95 @@
-import os
-#import secrets
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+from models import db, LessonPlan
 
-from flask import Flask, jsonify
-from flask_smorest import Api
-#from flask_jwt_extended import JWTManager
-from flask_migrate import Migrate
+app = Flask(__name__)
 
-from db import db
-from blocklist import BLOCKLIST
-from models import _____Model
-from resources._____ import blp as _____BluePrint
+# Updated CORS configuration
+CORS(app, 
+     resources={r"/*": {"origins": "*"}},
+     supports_credentials=True)
 
-def create_app(db_url=None):
-    app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///lessons.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-    app.config["PROPAGATE_EXCEPTIONS"] = True
-    app.config["API_TITLE"] = "Lesson Database REST API"
-    app.config["API_VERSION"] = "v1"
-    app.config["OPENAPI_VERSION"] = "3.0.3"
-    app.config["OPENAPI_URL_PREFIX"] = "/"
-    app.config["OPENAPI_SWAGGER_UI_PATH"] = "/swagger-ui"
-    app.config["OPENAPI_SWAGGER_UI_URL"] = "https://cdn.jsdelivr.net/npm/swagger-ui-dist/"
-    app.config["SQLALCHEMY_DATABASE_URI"] = db_url or os.getenv("DATABASE_URL", "sqlite:///volunteer.db")
-    app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-    db.init_app(app)
+db.init_app(app)
 
-    migrate = Migrate(app, db)
+# root
+@app.route('/')
+def home():
+    return jsonify({"message": "WORKING"})
 
-    api = Api(app)
-    
-    '''
-    app.config["JWT_SECRET_KEY"] = "_________"
-    
-    jwt = JWTManager(app)
+# subjects 
+@app.route('/api/subjects', methods=['GET', 'OPTIONS'])
+def get_subjects():
+    if request.method == "OPTIONS":
+        return "", 204
+    try:
+        subjects = db.session.query(LessonPlan.subject).distinct().all()
+        subject_list = [subject[0] for subject in subjects]
+        print("Subjects found:", subject_list)
+        return jsonify(subject_list)
+    except Exception as e:
+        print("Error:", str(e))
+        return jsonify({"error": str(e)}), 500
 
-    @jwt.token_in_blocklist_loader
-    def check_if_token_in_blocklist(jwt_header, jwt_payload):
-        return jwt_payload["jti"] in BLOCKLIST
-    
-    @jwt.revoked_token_loader
-    def revoked_token_callback(jwt_header, jwt_payload):
-        return jsonify({"description": "The token has been revoked", "error": "token_revoked"}), 401
-    
-    @jwt.needs_fresh_token_loader
-    def token_not_fresh_callback(jwt_header, jwt_payload):
-        return jsonify({"description": "The token is not fresh", "error": "fresh_token_required"}), 401
-    
-    @jwt.expired_token_loader
-    def expired_token_callback(jwt_header, jwt_payload):
-        return jsonify({"message": "The token has expired", "error": "token_expired"}), 401
-        
-    @jwt.invalid_token_loader
-    def invalid_token_callback(error):
-        return jsonify({"message": "Signature verification failed", "error": "invalid_token"}), 401
-        
-    @jwt.unauthorized_loader
-    def missing_token_callback(error):
-        return jsonify({"description": "Request doesn't contain access token", "error": "authorization_required"}), 401
-    
-    @jwt.additional_claims_loader 
-    def add_claims_to_jwt(identity):
-        user = UserModel.query.get(identity)
-        return {"is_admin": user.is_admin}
-    '''        
+# lessons
+@app.route('/api/lessons', methods=['POST'])
+def upload_lesson():
+    data = request.get_json()
+    new_lesson = LessonPlan(
+        json_content=data['json_content'],
+        author=data['author'],
+        subject=data['subject'],
+        lesson_number=data['lesson_number']
+    )
+    db.session.add(new_lesson)
+    db.session.commit()
+    return jsonify({'message': 'Lesson uploaded successfully'}), 201
 
-    api.register_blueprint(UserBluePrint)
-    
-    return app
+# lessons by subject
+@app.route('/api/lessons/<subject>', methods=['GET'])
+def get_lessons_by_subject(subject):
+    lessons = LessonPlan.query.filter_by(subject=subject).all()
+    return jsonify([{
+        'id': lesson.id,
+        'author': lesson.author,
+        'subject': lesson.subject,
+        'lesson_number': lesson.lesson_number,
+        'likes': lesson.likes
+    } for lesson in lessons])
+
+# things in lessons
+@app.route('/api/lessons/<subject>/<int:lesson_number>', methods=['GET'])
+def get_lesson_content(subject, lesson_number):
+    lessons = LessonPlan.query.filter_by(
+        subject=subject,
+        lesson_number=lesson_number
+    ).all()
+    return jsonify([{
+        'id': lesson.id,
+        'json_content': lesson.json_content,
+        'author': lesson.author,
+        'likes': lesson.likes
+    } for lesson in lessons])
+
+@app.route('/api/lessons/<int:lesson_id>/like', methods=['POST'])
+def like_lesson(lesson_id):
+    lesson = LessonPlan.query.get_or_404(lesson_id)
+    lesson.likes += 1
+    db.session.commit()
+    return jsonify({'likes': lesson.likes})
+
+# errors
+@app.errorhandler(404)
+def not_found_error(error):
+    return jsonify({"error": "Resource not found"}), 404
+
+@app.errorhandler(500)
+def internal_error(error):
+    return jsonify({"error": "Internal server error"}), 500
+
+if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()
+    app.run(debug=True, host='0.0.0.0')
