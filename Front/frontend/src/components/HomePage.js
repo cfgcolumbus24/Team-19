@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import ImageCarousel from "./ImageCarousel"; // Import the ImageCarousel component
-import DropBar from "./DropBar"; // Import the DropBar component
+import MainDrop from "./MainDrop"; // Import the MainDrop component
 import Footer from "./Footer"; // Import the Footer component
 import VideoFile from "../assets/4221485-hd_1920_1080_30fps.mp4";
 import "./HomePage.css";
@@ -93,7 +93,7 @@ function HomePage() {
 				<h1 className="teacher-tools-heading text-center mb-4">
 					Teacher Learning Tools
 				</h1>
-				<DropBar /> {/* Add DropBar component here */}
+				<MainDrop /> {/* Add MainDrop component here */}
 			</Container>
 			{/* Include Footer */}
 			<Footer />
