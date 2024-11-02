@@ -54,7 +54,7 @@ export default function LessonPlan() {
     };
 
     return (
-        <div className="lesson-page">
+        <div className="lesson-plan">
             <h1>{subject} - Lesson {lessonNumber}</h1>
             <div className="lesson-content">
                 <RenderJSON data={plan.json_content} />

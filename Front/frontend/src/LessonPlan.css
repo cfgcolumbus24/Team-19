@@ -1,5 +1,5 @@
 /* Base editor styling */
-.lesson-page {
+.lesson-plan {
     background-color: #ccc; /* Dark background for editor effect */
     color: #abb2bf; /* Light text color */
     font-family: "Courier New", Courier, monospace; /* Monospace font for code style */
@@ -11,11 +11,11 @@
 }
 
 /* Title and Author styling */
-.lesson-page h1,
-.lesson-page h2 {
+.lesson-plan h1,
+.lesson-plan h2 {
     color: #000000; /* Light blue for headings */
     font-weight: normal; /* Normal font weight */
-    border-bottom: 1px solid #3b4048; /* Underline for separation */
+   /* border-bottom: 1px solid #3b4048; /* Underline for separation */
     padding-bottom: 5px; /* Padding under the heading */
     margin-bottom: 15px; /* Space below the heading */
 }
@@ -30,7 +30,7 @@
 }
 
 /* Section headers styling (e.g., materials, objectives) */
-.lesson-page h3 {
+.lesson-plan h3 {
     color: #e06c75; /* Soft red for subheadings */
     font-size: 1.2em; /* Slightly larger font size */
     margin-top: 20px; /* Space above the subheading */
@@ -38,19 +38,19 @@
 }
 
 /* Bulleted list styling */
-.lesson-page ul {
+.lesson-plan ul {
     list-style-type: disc; /* Disc bullet points */
     margin-left: 20px; /* Left margin for bullets */
     padding-left: 10px; /* Padding for the bullet list */
 }
 
-.lesson-page ul li {
+.lesson-plan ul li {
     color: #000000; /* Soft green for list items */
     margin: 5px 0; /* Space between list items */
 }
 
 /* Button styling */
-.lesson-page button {
+.lesson-plan button {
     background-color: #4afb5c; /* Light blue background */
     color: #282c34; /* Dark text color */
     font-weight: bold; /* Bold text */
@@ -62,22 +62,24 @@
     margin-top: 15px; /* Space above the button */
 }
 
-.lesson-page button:hover {
+.lesson-plan button:hover {
     background-color: #209b45; /* Darker blue on hover */
 }
 
 /* JSON key styling */
-.lesson-page p {
+.lesson-plan p {
     color: #d19a66; /* Orange color for paragraphs */
     margin-top: 5px; /* Space above paragraphs */
     margin-left: 15px; /* Left margin for paragraphs */
 }
 
 /* Author grid styling */
-.author-grid {
+.d-grid {
     display: grid; /* Use grid layout for authors */
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
     gap: 5px; /* Space between grid items */
     color: #666; /* Gray color for author text */
     margin-top: 10px; /* Space above the grid */
 }
+
+
