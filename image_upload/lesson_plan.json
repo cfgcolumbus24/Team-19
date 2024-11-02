@@ -1,0 +1,74 @@
+{
+  "lesson_id": "LP001",
+  "subject": {
+    "headline": "Math",
+    "main_topic": "Multiplication",
+    "subtopics": [
+      {
+        "name": "Counting",
+        "estimated_time": "15 minutes",
+        "learning_objectives": [
+          "Understand the concept of counting as a foundational skill for multiplication"
+        ],
+        "materials_needed": ["Counters", "Number charts"],
+        "instructional_activities": [
+          "Practice counting objects up to 20",
+          "Use number charts to reinforce counting patterns"
+        ],
+        "assessment_methods": [
+          "Observe student ability to count objects correctly"
+        ]
+      },
+      {
+        "name": "Repetitive Addition",
+        "estimated_time": "20 minutes",
+        "learning_objectives": [
+          "Understand that multiplication is repeated addition"
+        ],
+        "materials_needed": ["Counters", "Addition worksheets"],
+        "instructional_activities": [
+          "Use counters to demonstrate adding groups of the same number",
+          "Practice adding the same number multiple times on worksheets"
+        ],
+        "assessment_methods": [
+          "Worksheet completion on repetitive addition",
+          "Observation of student ability to group numbers"
+        ]
+      },
+      {
+        "name": "Multiplying Single-Digit Numbers",
+        "estimated_time": "25 minutes",
+        "learning_objectives": [
+          "Learn to multiply single-digit numbers",
+          "Memorize multiplication facts for numbers 1 through 10"
+        ],
+        "materials_needed": ["Multiplication table", "Flashcards"],
+        "instructional_activities": [
+          "Practice multiplication with a table",
+          "Use flashcards to reinforce multiplication facts"
+        ],
+        "assessment_methods": [
+          "Multiplication quiz on single-digit numbers",
+          "Flashcard speed drill for memorization"
+        ]
+      },
+      {
+        "name": "Multiplying Two-Digit Numbers",
+        "estimated_time": "30 minutes",
+        "learning_objectives": [
+          "Learn the process for multiplying two-digit numbers",
+          "Apply single-digit multiplication skills to larger numbers"
+        ],
+        "materials_needed": ["Grid paper", "Pencil"],
+        "instructional_activities": [
+          "Practice two-digit multiplication with grid paper",
+          "Work on multi-step multiplication problems"
+        ],
+        "assessment_methods": [
+          "Two-digit multiplication worksheet",
+          "Teacher observation of problem-solving approach"
+        ]
+      }
+    ]
+  }
+}
