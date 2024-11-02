@@ -5,6 +5,7 @@ form {
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif; /* Apply the Roboto font */
   }
   
   form h3, form h4 {
@@ -17,8 +18,13 @@ form {
   }
   
   form .subtopic {
-    margin-top: 20px; /* Add margin to space out subtopics */
-    margin-bottom: 20px; /* Reduce bottom margin for consistency */
+    margin-top: 30px; /* Add margin to space out subtopics */
+    margin-bottom: 30px; /* Ensure consistent bottom margin */
+  }
+  
+  form .subtopic h4 {
+    margin-top: 0; /* Remove top margin for subtopic titles */
+    margin-bottom: 15px; /* Add bottom margin for subtopic titles */
   }
   
   form label {

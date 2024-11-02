@@ -3,7 +3,10 @@ import './Form.css';
 
 // Utility function to capitalize the first letter of each word
 const capitalizeWords = (str) => {
-  return str.replace(/\b\w/g, char => char.toUpperCase());
+  if (str === "lesson_id") {
+    return "Lesson ID";
+  }
+  return str.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
 };
 
 const Form = () => {
@@ -127,7 +130,7 @@ const Form = () => {
         <input
           type="text"
           name="lesson_id"
-          value={formData.lesson_id}
+          placeholder={formData.lesson_id}
           onChange={(e) => handleChange(e, "lesson_id")}
         />
       </div>
@@ -137,14 +140,14 @@ const Form = () => {
         <input
           type="text"
           name="headline"
-          value={formData.subject.headline}
+          placeholder={formData.subject.headline}
           onChange={(e) => handleChange(e, "subject", "headline")}
         />
         <label>{capitalizeWords("main_topic")}:</label>
         <input
           type="text"
           name="main_topic"
-          value={formData.subject.main_topic}
+          placeholder={formData.subject.main_topic}
           onChange={(e) => handleChange(e, "subject", "main_topic")}
         />
         {formData.subject.subtopics.map((subtopic, index) => (
@@ -154,38 +157,38 @@ const Form = () => {
             <input
               type="text"
               name="name"
-              value={subtopic.name}
+              placeholder={subtopic.name}
               onChange={(e) => handleChange(e, "subject", "name", index)}
             />
             <label>{capitalizeWords("estimated_time")}:</label>
             <input
               type="text"
               name="estimated_time"
-              value={subtopic.estimated_time}
+              placeholder={subtopic.estimated_time}
               onChange={(e) => handleChange(e, "subject", "estimated_time", index)}
             />
             <label>{capitalizeWords("learning_objectives")}:</label>
             <textarea
               name="learning_objectives"
-              value={subtopic.learning_objectives.join(", ")}
+              placeholder={subtopic.learning_objectives.join(", ")}
               onChange={(e) => handleChange(e, "subject", "learning_objectives", index)}
             />
             <label>{capitalizeWords("materials_needed")}:</label>
             <textarea
               name="materials_needed"
-              value={subtopic.materials_needed.join(", ")}
+              placeholder={subtopic.materials_needed.join(", ")}
               onChange={(e) => handleChange(e, "subject", "materials_needed", index)}
             />
             <label>{capitalizeWords("instructional_activities")}:</label>
             <textarea
               name="instructional_activities"
-              value={subtopic.instructional_activities.join(", ")}
+              placeholder={subtopic.instructional_activities.join(", ")}
               onChange={(e) => handleChange(e, "subject", "instructional_activities", index)}
             />
             <label>{capitalizeWords("assessment_methods")}:</label>
             <textarea
               name="assessment_methods"
-              value={subtopic.assessment_methods.join(", ")}
+              placeholder={subtopic.assessment_methods.join(", ")}
               onChange={(e) => handleChange(e, "subject", "assessment_methods", index)}
             />
           </div>
