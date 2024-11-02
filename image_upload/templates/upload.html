@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture and Upload Image</title>
+</head>
+<body>
+    <h1>Capture and Upload Lesson Plan Image</h1>
+    <form id="uploadForm" action="http://10.250.232.171:5001/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" capture="camera">
+        <button type="submit">Upload Photo</button>
+    </form>
+    <div id="output"></div>
+
+    <script>
+        document.getElementById("uploadForm").onsubmit = async function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(document.getElementById("uploadForm"));
+            try {
+                const response = await fetch("http://10.250.232.171:5001/upload", {
+                    method: "POST",
+                    body: formData
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    document.getElementById("output").innerHTML = "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+                } else {
+                    document.getElementById("output").innerHTML = "<p>Error uploading image: " + response.statusText + "</p>";
+                }
+            } catch (error) {
+                document.getElementById("output").innerHTML = "<p>Error uploading image</p>";
+                console.error("Error:", error);
+            }
+        };
+    </script>
+</body>
+</html>
