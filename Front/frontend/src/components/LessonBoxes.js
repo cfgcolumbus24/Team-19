@@ -1,12 +1,15 @@
-// for displaying lesson boxes in SubjectPage.js
-
 import React from 'react';
-import './LessonBoxes.css';
-
-export default function LessonBoxes({ title = "Lesson Box" }) {
+import Card from 'react-bootstrap/Card';
+import { BsHeart } from 'react-icons/bs';
+export default function LessonBoxes({ title, likes }) {
   return (
-    <div className="lesson-box">
-      <h2>{title}</h2>
-    </div>
+      <Card className="lesson-box">
+          <Card.Body>
+              <Card.Title>{title}</Card.Title>
+              <div className="likes">
+                  <BsHeart /> {likes}
+              </div>
+          </Card.Body>
+      </Card>
   );
 }

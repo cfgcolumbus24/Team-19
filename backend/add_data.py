@@ -10,7 +10,7 @@ def add_sample_data():
                     "objectives": ["Understand variables", "Basic equations"],
                     "materials": ["Textbook", "Calculator"]
                 },
-                "author": "John Doe",
+                "author": "Again John Doe",
                 "subject": "Math",
                 "lesson_number": 1,
             },
@@ -20,7 +20,7 @@ def add_sample_data():
                     "objectives": ["Cell structure", "Cell function"],
                     "materials": ["Microscope", "Slides"]
                 },
-                "author": "Jane Smith",
+                "author": "Again Jane Smith",
                 "subject": "Science",
                 "lesson_number": 1,
             },
@@ -30,9 +30,39 @@ def add_sample_data():
                     "objectives": ["Thesis statements", "Paragraph structure"],
                     "materials": ["Writing guide", "Examples"]
                 },
-                "author": "Bob Wilson",
+                "author": "Again Bob Wilson",
                 "subject": "English",
                 "lesson_number": 1,
+            },
+                        {
+                "json_content": {
+                    "title": "Introduction to Algebra",
+                    "objectives": ["Understand variables", "Basic equations"],
+                    "materials": ["Textbook", "Calculator"]
+                },
+                "author": "Again John Doe",
+                "subject": "Math",
+                "lesson_number": 2,
+            },
+            {
+                "json_content": {
+                    "title": "Cell Biology",
+                    "objectives": ["Cell structure", "Cell function"],
+                    "materials": ["Microscope", "Slides"]
+                },
+                "author": "Again Jane Smith",
+                "subject": "Science",
+                "lesson_number": 2,
+            },
+            {
+                "json_content": {
+                    "title": "Essay Writing",
+                    "objectives": ["Thesis statements", "Paragraph structure"],
+                    "materials": ["Writing guide", "Examples"]
+                },
+                "author": "Again Bob Wilson",
+                "subject": "English",
+                "lesson_number": 2,
             }
         ]
 
