@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import './LessonPage.css'
 
 export default function LessonPage() {
     const { subject, lessonNumber } = useParams();
@@ -43,7 +44,22 @@ export default function LessonPage() {
             {lessons.map(lesson => (
                 <div key={lesson.id} className="lesson-content">
                     <h2>Author: {lesson.author}</h2>
-                    <pre>{JSON.stringify(lesson.json_content, null, 2)}</pre>
+
+                    {Object.entries(lesson.json_content).map(([key, value]) => (
+                        <div key={key}>
+                            <h3>{key.charAt(0).toUpperCase() + key.slice(1)}</h3>
+                            {Array.isArray(value) ? (
+                                <ul>
+                                    {value.map((item, index) => (
+                                        <li key={index}>{item}</li>
+                                    ))}
+                                </ul>
+                            ) : (
+                                <p>{value}</p>
+                            )}
+                        </div>
+                    ))}
+
                     <button onClick={() => handleLike(lesson.id)}>
                         Like ({lesson.likes})
                     </button>
