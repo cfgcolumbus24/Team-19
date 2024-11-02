@@ -21,7 +21,6 @@ export default function SubjectPage() {
 					new Set(data.map((lesson) => lesson.lesson_number))
 				).map((lesson_number) => ({
 					lesson_number,
-					// Sum likes for all versions of this lesson
 					likes: data
 						.filter((l) => l.lesson_number === lesson_number)
 						.reduce((sum, l) => sum + l.likes, 0),
