@@ -72,7 +72,12 @@ export default function MainDrop() {
 							)}
 						</Dropdown.Menu>
 					</Dropdown>
-					<Button onClick={() => navigate("/scan")} className="scan-button">
+					<Button
+						onClick={() =>
+							window.open("http://10.250.232.171:5001/upload", "_blank")
+						}
+						className="scan-button"
+					>
 						<BsCamera style={{ marginBottom: "4px", marginRight: "6px" }} />{" "}
 						Scan Lesson Plan
 					</Button>
