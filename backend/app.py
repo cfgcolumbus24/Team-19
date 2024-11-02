@@ -4,7 +4,6 @@ from models import db, LessonPlan
 
 app = Flask(__name__)
 
-# Updated CORS configuration
 CORS(app, 
      resources={r"/*": {"origins": "*"}},
      supports_credentials=True)
