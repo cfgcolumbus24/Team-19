@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-<<<<<<< HEAD
 import './LessonPage.css'
-=======
->>>>>>> parent of c17f76e (Merge pull request #20 from cfgcolumbus24/xiaoguo)
 
 export default function LessonPage() {
     const { subject, lessonNumber } = useParams();
@@ -47,7 +44,6 @@ export default function LessonPage() {
             {lessons.map(lesson => (
                 <div key={lesson.id} className="lesson-content">
                     <h2>Author: {lesson.author}</h2>
-<<<<<<< HEAD
 
                     {Object.entries(lesson.json_content).map(([key, value]) => (
                         <div key={key}>
@@ -64,9 +60,6 @@ export default function LessonPage() {
                         </div>
                     ))}
 
-=======
-                    <pre>{JSON.stringify(lesson.json_content, null, 2)}</pre>
->>>>>>> parent of c17f76e (Merge pull request #20 from cfgcolumbus24/xiaoguo)
                     <button onClick={() => handleLike(lesson.id)}>
                         Like ({lesson.likes})
                     </button>
