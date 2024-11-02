@@ -4,6 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import MainDrop from "./components/MainDrop";
 import Card from "react-bootstrap/Card";
 import { BsHeart } from "react-icons/bs";
+import "./LessonPage.css";
 
 export default function LessonPage() {
 	const { subject, lessonNumber } = useParams();
