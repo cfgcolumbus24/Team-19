@@ -5,9 +5,11 @@
     font-family: "Courier New", Courier, monospace; /* Monospace font for code style */
     padding: 20px; /* Padding around content */
     border-radius: 5px; /* Rounded corners */
-    max-width: 800px; /* Maximum width */
+    max-width: 800px; Maximum width
     margin: auto; /* Center the content */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    background: lightblue;
+
 }
 
 /* Title and Author styling */
@@ -51,7 +53,7 @@
 
 /* Button styling */
 .lesson-plan button {
-    background-color: #4afb5c; /* Light blue background */
+    background-color: teal; /* Light blue background */
     color: #282c34; /* Dark text color */
     font-weight: bold; /* Bold text */
     border: none; /* No border */
@@ -59,11 +61,15 @@
     border-radius: 4px; /* Rounded corners for the button */
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.2s ease; /* Smooth background change on hover */
+    display: flex;
+    align-items: center;
+    
+  
     margin-top: 15px; /* Space above the button */
 }
 
 .lesson-plan button:hover {
-    background-color: #209b45; /* Darker blue on hover */
+    background-color: #0037ff; /* Darker blue on hover */
 }
 
 /* JSON key styling */
