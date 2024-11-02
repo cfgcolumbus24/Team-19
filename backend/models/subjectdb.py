@@ -1,7 +1,7 @@
 from db import db
 
 
-class Subject(db.Model):
+class SubjectModel(db.Model):
     __tablename__ = "subjects"
     
     subject_id = db.Column(db.Integer, primary_key=True)
