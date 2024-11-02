@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import Header from "./Header"; // Import the Header component
 import ImageCarousel from "./ImageCarousel"; // Import the ImageCarousel component
 import MainDrop from "./MainDrop"; // Import the MainDrop component
 import Footer from "./Footer"; // Import the Footer component
@@ -50,6 +51,8 @@ function HomePage() {
 
 	return (
 		<div className="homepage-container">
+			<Header /> {/* Include Header at the top */}
+			
 			{/* Video container */}
 			<div className="video-crop-container">
 				<video className="video-background" autoPlay loop muted>
