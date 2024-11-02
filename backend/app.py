@@ -15,7 +15,7 @@ def create_app(db_url=None):
     app = Flask(__name__)
 
     app.config["PROPAGATE_EXCEPTIONS"] = True
-    app.config["API_TITLE"] = "Stores REST API"
+    app.config["API_TITLE"] = "Lesson Database REST API"
     app.config["API_VERSION"] = "v1"
     app.config["OPENAPI_VERSION"] = "3.0.3"
     app.config["OPENAPI_URL_PREFIX"] = "/"
@@ -30,7 +30,7 @@ def create_app(db_url=None):
     api = Api(app)
     
     '''
-    app.config["JWT_SECRET_KEY"] = "180708825464023058112160352851979247211"
+    app.config["JWT_SECRET_KEY"] = "_________"
     
     jwt = JWTManager(app)
 
