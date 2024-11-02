@@ -24,7 +24,7 @@ export default function Home() {
         {/* change href to scanner page*/}
         <Button href="https://www.google.com" target="_blank">
             <startIcon>
-                Scan/Upload Lesson Plan
+                Scan Lesson Plan
                 <BsCamera style={{ marginLeft: '8px', marginBottom: '3px'}}/>
                 </startIcon>
         </Button>
