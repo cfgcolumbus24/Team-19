@@ -20,10 +20,16 @@ export default function SubjectPage() {
         fetchLessons();
     }, [subject]);
 
+    const capitalizeFirstLetter = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    };
+
+    const capitalizedSubject = capitalizeFirstLetter(subject);
     return (
-        <div className="subject-page">
+        <div>
             <MainDrop />
-            <h1>{subject} Lessons</h1>
+        <div className="subject-page">
+            <h1>{capitalizedSubject} Lessons</h1>
             <div className="lessons-grid">
                 {lessons.map((lesson) => (
                     <LessonBoxes 
@@ -33,6 +39,7 @@ export default function SubjectPage() {
                     />
                 ))}
             </div>
+        </div>
         </div>
     );
 }
