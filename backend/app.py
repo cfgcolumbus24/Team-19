@@ -1,7 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from models import db, LessonPlan
-
 app = Flask(__name__)
 
 # Updated CORS configuration
