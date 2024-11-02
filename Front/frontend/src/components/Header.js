@@ -2,10 +2,13 @@ import React from "react";
 import Dropdown from 'react-bootstrap/Dropdown';
 import Button from 'react-bootstrap/Button';
 import { BsCamera } from "react-icons/bs";
+import logo from '../opportunityinternationallogo.png';
+import "./Header.css";
 
-export default function Home() {
+export default function Header() {
     return (
-        <div className="dropdownandscan">
+        <nav className="navbar">
+            <img src={logo} alt="Opportunity International Logo" className="logo"/>
             <Dropdown>
             <Dropdown.Toggle variant="success" id="dropdown-basic">
                 Select Subject
@@ -29,7 +32,7 @@ export default function Home() {
                 </startIcon>
         </Button>
 
-        </div>
+        </nav>
         
     );
 }

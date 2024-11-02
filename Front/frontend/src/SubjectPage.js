@@ -1,6 +1,7 @@
 import React from "react";
 import Home from "./components/MainDrop";
 import "./SubjectPage.css";
+import "./components/Header";
 
 export default function SubjectPage() {
     return (
@@ -10,4 +11,4 @@ export default function SubjectPage() {
             </div>
         </div>
     );
-}
+}  
