@@ -1,0 +1,83 @@
+/* Base editor styling */
+.lesson-page {
+    background-color: #ccc; /* Dark background for editor effect */
+    color: #abb2bf; /* Light text color */
+    font-family: "Courier New", Courier, monospace; /* Monospace font for code style */
+    padding: 20px; /* Padding around content */
+    border-radius: 5px; /* Rounded corners */
+    max-width: 800px; /* Maximum width */
+    margin: auto; /* Center the content */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Title and Author styling */
+.lesson-page h1,
+.lesson-page h2 {
+    color: #000000; /* Light blue for headings */
+    font-weight: normal; /* Normal font weight */
+    border-bottom: 1px solid #3b4048; /* Underline for separation */
+    padding-bottom: 5px; /* Padding under the heading */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+/* Lesson content styling */
+.lesson-content {
+    background-color: #b0b0b0; /* Slightly lighter dark background for lesson content */
+    padding: 15px; /* Padding around the lesson content */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below each lesson content block */
+    box-shadow: 0px 2px 5px rgba(67, 61, 61, 0.2); /* Soft shadow for depth */
+}
+
+/* Section headers styling (e.g., materials, objectives) */
+.lesson-page h3 {
+    color: #e06c75; /* Soft red for subheadings */
+    font-size: 1.2em; /* Slightly larger font size */
+    margin-top: 20px; /* Space above the subheading */
+    margin-bottom: 10px; /* Space below the subheading */
+}
+
+/* Bulleted list styling */
+.lesson-page ul {
+    list-style-type: disc; /* Disc bullet points */
+    margin-left: 20px; /* Left margin for bullets */
+    padding-left: 10px; /* Padding for the bullet list */
+}
+
+.lesson-page ul li {
+    color: #000000; /* Soft green for list items */
+    margin: 5px 0; /* Space between list items */
+}
+
+/* Button styling */
+.lesson-page button {
+    background-color: #4afb5c; /* Light blue background */
+    color: #282c34; /* Dark text color */
+    font-weight: bold; /* Bold text */
+    border: none; /* No border */
+    padding: 8px 12px; /* Padding around the button */
+    border-radius: 4px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.2s ease; /* Smooth background change on hover */
+    margin-top: 15px; /* Space above the button */
+}
+
+.lesson-page button:hover {
+    background-color: #209b45; /* Darker blue on hover */
+}
+
+/* JSON key styling */
+.lesson-page p {
+    color: #d19a66; /* Orange color for paragraphs */
+    margin-top: 5px; /* Space above paragraphs */
+    margin-left: 15px; /* Left margin for paragraphs */
+}
+
+/* Author grid styling */
+.author-grid {
+    display: grid; /* Use grid layout for authors */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 5px; /* Space between grid items */
+    color: #666; /* Gray color for author text */
+    margin-top: 10px; /* Space above the grid */
+}
