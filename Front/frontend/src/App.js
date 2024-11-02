@@ -3,18 +3,23 @@ import Home from './Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import QuizApp from './components/quizApp';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import SubjectPage from './SubjectPage';
+import LessonPage from './LessonPage';
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-      <Routes>
-      <Route path='/' Component={Home}></Route>
-      <Route path='/quiz' Component={QuizApp}></Route>
-      </Routes>
-      </BrowserRouter>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/subject/:subject" element={<SubjectPage />} />
+          <Route path="/subject/:subject/lesson/:lessonNumber" element={<LessonPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
