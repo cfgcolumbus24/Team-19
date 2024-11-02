@@ -1,0 +1,24 @@
+.footer {
+    background-color: rgba(248, 249, 250, 0) !important; /* Add !important to force the style */
+    border-top: 1px solid rgba(221, 221, 221, 0);
+}
+
+
+
+.footer h4,
+.footer h5 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    color: #333; /* Darker text for contrast */
+}
+
+.footer p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #555; /* Slightly lighter text for readability */
+}
+
+.footer button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
