@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import LessonBoxes from "./components/LessonBoxes";
 import MainDrop from "./components/MainDrop";
+import "./SubjectPage.css";
 
 export default function SubjectPage() {
 	const { subject } = useParams();
@@ -40,7 +41,6 @@ export default function SubjectPage() {
 			<MainDrop />
 			<div className="subject-header">
 				<h1>{subject} Lessons</h1>
-				<div className="lesson-count">Total Unique Lessons: {lessonCount}</div>
 			</div>
 			<div className="lessons-grid">
 				{lessons.map((lesson) => (
@@ -49,7 +49,7 @@ export default function SubjectPage() {
 						to={`/subject/${subject}/lesson/${lesson.lesson_number}`}
 						style={{ textDecoration: "none" }}
 					>
-						<LessonBoxes
+						<LessonBoxes className="lesson-box"
 							title={`Lesson ${lesson.lesson_number}`}
 							likes={lesson.likes}
 						/>
