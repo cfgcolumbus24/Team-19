@@ -1,13 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font globally */
+}
+
 .navbar {
-    background-color: #222222;
+    background: linear-gradient(to right, #ffffff, #cccccc); /* Gradient from white to grey */
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 10px;
+    justify-content: space-between; /* Space out logo and buttons */
+    padding: 10px 20px;
+    gap: 15px;
 }
 
 .logo {
-    width: 225 px;
-    height: 75px;
-}   
+    width: 150px; /* Adjust the size as needed */
+    height: auto;
+    object-fit: contain;
+    margin-right: 20px; /* Space between the logo and other elements */
+}
+
+.navbar .dropdown-toggle,
+.navbar .btn {
+    font-family: 'Poppins', sans-serif; /* Ensure buttons use Poppins */
+    margin-left: 10px;
+    border-radius: 5px; /* Optional rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+.navbar .dropdown-toggle:hover,
+.navbar .btn:hover {
+    background-color: #b3b3b3; /* Slightly darker color on hover */
+    color: #ffffff;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    font-family: 'Poppins', sans-serif; /* Ensure dropdown items use Poppins */
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+    background-color: #555555; /* Slightly lighter hover effect */
+    color: #ffffff; /* Text color when hovered */
+}
+
+.nav-link {
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font to nav links */
+}
