@@ -6,7 +6,7 @@ form {
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #f9f9f9;
-    font-family: 'Roboto', sans-serif; /* Apply the Roboto font */
+    font-family: sans-serif; /* Apply the sans-serif font */
   }
   
   /* Add CSS for form headings, subtopics, labels, inputs, and buttons */
@@ -15,8 +15,10 @@ form {
     margin-bottom: 20px;
   }
   
+  /* Add margin to space out form elements */
   form div {
     margin-bottom: 15px;
+    margin-top: 15px;
   }
   
   form .subtopic {
@@ -29,9 +31,11 @@ form {
     margin-bottom: 15px; /* Add bottom margin for subtopic titles */
   }
   
+  /*Add CSS for form labels which are the questions*/
   form label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    margin-top: 8px;
     font-weight: bold;
   }
   
@@ -40,10 +44,11 @@ form {
     width: 100%;
     height: 44px;
     background-color: #05060f0a;
-    border-radius: .5rem;
+    border-radius: 30em;
     padding: 0 1rem;
     border: 2px solid transparent;
     font-size: 1rem;
+    font-family: sans-serif;
     transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s, background .2s cubic-bezier(.25,.01,.25,1) 0s;
     box-sizing: border-box;
   }
