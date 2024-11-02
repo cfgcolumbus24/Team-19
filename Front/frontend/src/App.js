@@ -1,3 +1,7 @@
+
+import Home from './Home';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import QuizApp from './components/quizApp';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
