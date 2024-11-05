@@ -1,0 +1,51 @@
+.sidebar-container {
+    position: relative;
+}
+
+.burger-button {
+    position: fixed;
+    top: 20px;
+    right: 20px; /* Move button to the right */
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Move sidebar to the right */
+    width: 250px;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.9); /* Slightly grey and transparent */
+    padding-top: 60px;
+    transition: 0.3s;
+    overflow-x: hidden;
+    z-index: 999;
+}
+
+.sidebar.open {
+    right: 0; /* Slide in from the right */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    font-size: 1.2rem;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+}

@@ -1,0 +1,35 @@
+.math-item:hover {
+    background-color: #ff0000; 
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.science-item:hover {
+    background-color: #04ff00; 
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.english-item:hover {
+    background-color: #ff00f7; 
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.reading-item:hover {
+    background-color: #0000fd; 
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.social-studies-item:hover {
+    background-color: #ffaa00; 
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.dropdownandscan .btn,
+.dropdownandscan .dropdown-toggle {
+    font-size: 1.25rem; 
+    padding: 10px 20px; 
+}

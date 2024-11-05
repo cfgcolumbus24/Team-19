@@ -17,4 +17,7 @@ code {
   gap: 20px;
   justify-content: center;
   margin-top: 10px;
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+
 }
+
