@@ -12,6 +12,58 @@ This project is a comprehensive Lesson Plan Management System designed to stream
 - **Responsive Design**: Mobile-friendly design to ensure accessibility on various devices.
 - **Quiz App**: Generate and take quizzes based on lesson plans to reinforce learning.
 
+## Project Structure
+
+Lesson Plan Management System
+├── backend
+│   ├── __pycache__
+│   ├── add_data.py
+│   ├── app.py
+│   ├── clear_db.py
+│   ├── instance
+│   ├── models.py
+│   ├── requirements.txt
+│   └── view_data.py
+├── Front
+│   ├── .DS_Store
+│   ├── frontend
+│   │   ├── .gitignore
+│   │   ├── build
+│   │   │   ├── asset-manifest.json
+│   │   │   ├── index.html
+│   │   │   ├── manifest.json
+│   │   │   └── ...
+│   │   ├── package.json
+│   │   ├── public
+│   │   ├── README.md
+│   │   └── src
+│   │       ├── HomePage.js
+│   │       ├── LessonPage.js
+│   │       ├── SubjectPage.js
+│   │       ├── components
+│   │       │   ├── MainDrop.js
+│   │       │   ├── Header.js
+│   │       │   ├── Footer.js
+│   │       │   ├── ImageCarousel.js
+│   │       │   ├── quiz.jsx
+│   │       │   ├── quizContent.jsx
+│   │       │   └── quizApp.jsx
+│   │       └── ...
+├── image_upload
+│   ├── __pycache__
+│   ├── app.py
+│   ├── lesson_plan.json
+│   ├── plan.json
+│   ├── questions.json
+│   ├── quiz.py
+│   ├── scanner_google_cloud.py
+│   ├── scanner_to_json_webcam.py
+│   ├── scanner_to_json.py
+│   ├── scanner.py
+│   └── templates
+│       └── upload.html
+├── package.json
+└── README.md
 
 ## Backend
 
@@ -115,3 +167,5 @@ The image upload functionality is implemented in the `image_upload` directory. I
 ## Environment Variables
 
 Create a `.env` file in the root directory and add the following environment variables:
+
+OPENAI_API_KEY=your_openai_api_key GOOGLE_APPLICATION_CREDENTIALS=path_to_your_google_cloud_credentials.json
