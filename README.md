@@ -1,4 +1,3 @@
-
 # Going as planned: Lesson Plan Management System
 
 ## Overview
@@ -11,8 +10,7 @@ This project is a comprehensive Lesson Plan Management System designed to stream
 - **Text Classification**: Classify extracted text using OpenAI to organize lesson plans.
 - **User Interface**: Interactive web interface built with React and Bootstrap for managing lesson plans.
 - **Responsive Design**: Mobile-friendly design to ensure accessibility on various devices.
-
-## Project Structure
+- **Quiz App**: Generate and take quizzes based on lesson plans to reinforce learning.
 
 
 ## Backend
@@ -64,6 +62,9 @@ The frontend is implemented using React and Bootstrap. It provides a user-friend
 - `Front/frontend/src/components/Header.js`: Header component that includes navigation links and the Opportunity International logo.
 - `Front/frontend/src/components/Footer.js`: Footer component that provides information about the organization's purpose and additional resources.
 - `Front/frontend/src/components/ImageCarousel.js`: Image carousel component for displaying staff images.
+- `Front/frontend/src/components/quiz.jsx`: Quiz component for taking quizzes based on lesson plans.
+- `Front/frontend/src/components/quizContent.jsx`: Contains the content for the quizzes.
+- `Front/frontend/src/components/quizApp.jsx`: Main component for the quiz application.
 
 ### Setup
 
