@@ -16,54 +16,31 @@ This project is a comprehensive Lesson Plan Management System designed to stream
 
 Lesson Plan Management System
 ├── backend
-│   ├── __pycache__
-│   ├── add_data.py
-│   ├── app.py
-│   ├── clear_db.py
-│   ├── instance
-│   ├── models.py
-│   ├── requirements.txt
-│   └── view_data.py
+│   ├── app.py               # Main backend application
+│   ├── models.py            # Database models with SQLAlchemy
+│   ├── add_data.py          # Adds sample data for testing
+│   ├── clear_db.py          # Resets database content
+│   └── view_data.py         # Views database content for debugging
 ├── Front
-│   ├── .DS_Store
 │   ├── frontend
-│   │   ├── .gitignore
-│   │   ├── build
-│   │   │   ├── asset-manifest.json
-│   │   │   ├── index.html
-│   │   │   ├── manifest.json
-│   │   │   └── ...
-│   │   ├── package.json
-│   │   ├── public
-│   │   ├── README.md
-│   │   └── src
-│   │       ├── HomePage.js
-│   │       ├── LessonPage.js
-│   │       ├── SubjectPage.js
-│   │       ├── components
-│   │       │   ├── MainDrop.js
-│   │       │   ├── Header.js
-│   │       │   ├── Footer.js
-│   │       │   ├── ImageCarousel.js
-│   │       │   ├── quiz.jsx
-│   │       │   ├── quizContent.jsx
-│   │       │   └── quizApp.jsx
-│   │       └── ...
+│   │   ├── src
+│   │   │   ├── HomePage.js          # Homepage component
+│   │   │   ├── LessonPage.js        # Lesson details component
+│   │   │   ├── SubjectPage.js       # Subject listing component
+│   │   │   └── components
+│   │       │   ├── MainDrop.js      # Dropdown component
+│   │       │   ├── Header.js        # Header/navigation
+│   │       │   ├── Footer.js        # Footer with organizational info
+│   │       │   ├── ImageCarousel.js # Carousel for displaying images
+│   │       │   ├── quiz.jsx         # Quiz app component
+│   │       │   └── quizContent.jsx  # Quiz content logic
 ├── image_upload
-│   ├── __pycache__
-│   ├── app.py
-│   ├── lesson_plan.json
-│   ├── plan.json
-│   ├── questions.json
-│   ├── quiz.py
-│   ├── scanner_google_cloud.py
-│   ├── scanner_to_json_webcam.py
-│   ├── scanner_to_json.py
-│   ├── scanner.py
+│   ├── app.py               # Image upload and processing app
+│   ├── scanner_google_cloud.py # Text extraction using Google Cloud Vision API
+│   ├── scanner_to_json.py   # Formats text into JSON
 │   └── templates
-│       └── upload.html
-├── package.json
-└── README.md
+│       └── upload.html      # Upload page template
+
 
 ## Backend
 
